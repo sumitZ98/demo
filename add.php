@@ -1,5 +1,5 @@
 <?php 
-
+	$title = $email = $ingredients = '';
 	$errors = array( 'email'=>'', 'title'=>'', 'ingredients'=>'');
 	if(isset($_POST['submit'])){
 
@@ -33,6 +33,13 @@
 			if(!preg_match('/^([a-zA-Z\s]+)(,\s*[a-zA-Z\s]*)*$/', $ingredients)){
 				$errors['ingredients'] = 'Ingredients must be a comma separated list';
 			}
+		}
+		//to check errors that is whether the data is field or empty
+		if(array_filter($errors)){	//it return true if there is an error and it returns false if there is no errors
+			//echo 'there is an error in the file'
+		} else{
+			//echo 'no error find so valid(here we save the data but here we are redirecting to its home page)'
+			header('Location: ../index.php');
 		}
 
 	} // end POST check
