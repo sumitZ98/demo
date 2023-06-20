@@ -33,22 +33,34 @@
 // people.forEach(person=>{
 //     content.innerHTML+= `<p>${person}</p>`
 // })
-const link = document.querySelector('a');
+// const link = document.querySelector('a');
 
-console.log(link.getAttribute('href')); //getting the attribute that is selected in the href of <a> tag
-link.setAttribute('href','https://www.w3schools.com'); // changing the attribute here
-link.innerText= 'hello darkness my old friend'; //changing the innertext of the anchor tag
+// console.log(link.getAttribute('href')); //getting the attribute that is selected in the href of <a> tag
+// link.setAttribute('href','https://www.w3schools.com'); // changing the attribute here
+// link.innerText= 'hello darkness my old friend'; //changing the innertext of the anchor tag
 
-const para = document.querySelector('p.errors');
-console.log(para);
-console.log(para.getAttribute('class'));
-para.setAttribute('class','newerror');
-para.setAttribute('style','color: green');
+// const para = document.querySelector('p.errors');
+// console.log(para);
+// console.log(para.getAttribute('class'));
+// para.setAttribute('class','newerror');
+// para.setAttribute('style','color: green');
 
-const hdr = document.querySelector('h1');
-// hdr.setAttribute('style','margin: 50px'); //ovverrides
-hdr.style.margin = '50px';
-hdr.style.color = 'crimson';
-hdr.style.fontSize = '60px';
-//to delete a property using style tag
-hdr.style.margin = "";
+// const hdr = document.querySelector('h1');
+// // hdr.setAttribute('style','margin: 50px'); //ovverrides
+// hdr.style.margin = '50px';
+// hdr.style.color = 'crimson';
+// hdr.style.fontSize = '60px';
+// //to delete a property using style tag
+// hdr.style.margin = "";
+// const content = document.querySelector('p');
+// content.classList.add('success'); // though class is not given but here we with the use of js defines its class in the html file
+// content.classList.remove('success');
+const paras = document.querySelectorAll('p');
+paras.forEach(para => {
+  if(para.textContent.includes('error')){
+    para.classList.add('error')
+  }
+  if(para.textContent.includes('success')){
+    para.classList.add('success');
+  }
+});
