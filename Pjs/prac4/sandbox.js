@@ -3,7 +3,7 @@
 const form = document.querySelector('.signup-form');
 //const username = document.querySelector('#username');
 const feedback = document.querySelector('.feedback');
-const usernamepattern = /^[a-zA-Z]{6,12}$/;
+const usernamepattern = /^[a-zA-Z]{6,12}$/;    //to check whether the input value is within a-z or A-Z and having min 6 chars and maximun 12 chars
 //const bg_change = document.querySelector('#username');
 
 form.addEventListener('submit', e => {
