@@ -1,0 +1,11 @@
+input{
+    display: block;
+    margin: 10px auto;
+    padding: 5px;
+}
+form{
+    max-width:200px;
+    margin:40px auto;
+    background: lightgrey;
+    padding: 10px;
+}
