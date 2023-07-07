@@ -1,7 +1,7 @@
 <?php 
 	$title = $email = $ingredients = '';
 	$errors = array( 'email'=>'', 'title'=>'', 'ingredients'=>'');
-	if(isset($_POST['submit'])){
+	if(isset($_POST['submit'])){		//isset is used to check whether the variable exist and is not null  //$_POST['submit'] it is used for detecting whether the form is submitted or not
 
 		$email = $title = $ingredients = '';
 		
