@@ -1,0 +1,255 @@
+Module - 1:
+1. What is the need for an operating system?
+Ans:An operating system is essential for managing computer hardware and software,
+ facilitating communication between applications and hardware components. 
+It provides a user interface, allocates system resources, ensures security, and 
+enables efficient multitasking. Overall,an OS is crucial for the effective and organized functioning
+of a computer system.
+
+2. What is SPOOL? What is the benefit of spooling?
+SPOOL (Simultaneous Peripheral Operations On-Line) is a computer system process that temporarily 
+stores data in a buffer before directing it to an output device. The main benefit of spooling is 
+improved efficiency by allowing overlapping of input/output operations, enhancing system responsiveness 
+and preventing idle time during data transfer to peripherals.
+
+3.Explain the characteristics of multi-processor and distributed systems.
+Ans: Multi-processor systems have multiple CPUs sharing a common memory, enhancing parallel processing.
+ Distributed systems consist of interconnected, autonomous computers that communicate and share resources 
+over a network, offering decentralization. Both aim to improve performance, scalability, and fault
+ tolerance through parallelism and resource distribution in different ways.
+
+4.What is a timer? Explain its role in an operating system.
+Ans: A timer in an operating system is a hardware or software component that measures and controls 
+time intervals. It plays a crucial role in scheduling tasks, enforcing time limits, and facilitating
+ multitasking by interrupting the CPU at predefined intervals, allowing the OS to switch between tasks
+ and manage system resources effectively.
+
+5. Give examples of hardware, software, and virtual resources.
+Ans: Hardware: CPU, memory (RAM), and printer. Software: operating system, web browser, and word processor.
+ Virtual resources: virtual machines, virtual memory, and cloud-based storage. These examples represent
+ physical components, programs, and simulated or remotely accessed resources in computing environments.
+
+6. What is the difference between a system call and a system program?
+Ans: A system call is an interface for a program to request services from the operating system,
+ like file operations. A system program is a collection of system calls bundled together to perform 
+specific tasks, such as compilers. System calls directly interact with the OS kernel, while system 
+programs use these calls for broader functionality.
+
+7. What are the shortcomings of monolithic architecture?
+Ans: Monolithic architecture's shortcomings include difficulty in maintenance and scalability.
+ A change in one part may affect the entire system, making updates complex. Lack of modularization
+ can hinder code organization and debugging. Additionally, scaling specific components independently 
+is challenging, limiting flexibility in adapting to varying workloads or requirements.
+
+8. Differentiate between monolithic and micro kernel.
+Ans: Monolithic kernels incorporate the entire operating system functionality in a single,
+ tightly integrated unit. In contrast, microkernels separate essential components, placing
+ only a minimal set of services in the kernel and relegating other functionalities to user-
+space processes. Microkernels aim for modularity, simplicity, and easier maintenance compared
+ to monolithic designs.
+
+9. Some CPUs provide for more than two modes of operation. What are two possible uses of
+these multiple modes?
+Ans: Multiple modes of CPU operation facilitate enhanced security and privilege separation. 
+One mode may be used for user-level tasks, ensuring restricted access to critical system resources.
+Another mode, typically a privileged mode or kernel mode, grants elevated permissions for system-level
+ operations, such as managing hardware resources and executing privileged instructions. This separation
+ helps prevent unauthorized access and protects the integrity of the system.
+
+10. What is the purpose of system calls?
+
+Ans: System calls provide a controlled interface for user-level programs to request 
+services from the operating system. They enable processes to access essential functionalities
+ like file operations, process creation, and communication with hardware. System calls serve as
+ a bridge between user applications and the privileged kernel, ensuring secure and efficient interaction
+ with system resources.
+
+11. What is the purpose of system programs?
+Ans:  System programs are software designed to perform specific tasks for the operating system,
+ enhancing its functionality and user experience. Examples include compilers, text editors, and 
+device drivers. These programs manage system resources, aid in system maintenance, and provide
+ utilities for users, contributing to the overall efficiency and usability of the computer system.
+
+12. Why do some systems store the operating system in firmware, while others store it on disk?
+Ans: Storing the operating system in firmware provides quick boot times and resilience,
+ as firmware is embedded in the hardware. Disk storage allows easy updates and flexibility,
+ letting users switch or upgrade operating systems. Design choices depend on factors like performance,
+ security, and the need for customization in different computing environments.
+
+13. What is the difference between a system call and a function call?
+
+Ans: A system call is a request made by a program to the operating system for a specific service,
+ such as file I/O. A function call is a routine invocation within a program to execute a specific
+ set of instructions. System calls involve a transition to kernel mode, while function calls remain 
+within user mode.
+
+14. What is the difference between a program and a process?
+Ans: A system call is a request made by a program to the operating system for a specific service, 
+such as file I/O. A function call is a routine invocation within a program to execute a specific 
+set of instructions. System calls involve a transition to kernel mode, while function calls remain
+ within user mode.
+
+15. How is context switching implemented?
+Ans: Context switching is implemented by saving the state of the currently running process,
+ including CPU registers and program counter, to the process control block. The OS then loads
+ the saved state of the next process from its control block, allowing seamless transition between
+ processes while maintaining the illusion of concurrent execution.
+
+16. What is context switch time? What is its disadvantage?
+Ans: Context switch time is the duration it takes for an operating system to save the state of a currently
+ running process and restore the state of another. Its disadvantage lies in the overhead it introduces,
+ consuming valuable CPU cycles. Frequent context switches can degrade system performance, impacting responsiveness
+ and throughput, especially in real-time or resource-intensive applications.
+
+17. What is the difference between a process and a thread?
+Ans: A process is an independent program with its own memory space and resources. 
+A thread is a lightweight unit within a process, sharing the same memory space and resources,
+ executing concurrently with other threads in the process. Threads within a process can communicate
+ more efficiently than separate processes due to shared resources.
+
+18. What is the need to create a thread?
+Ans: Threads allow for concurrent execution within a process, enhancing performance and responsiveness.
+ They share the same resources, making communication and data sharing more efficient compared to separate
+ processes. Threads are valuable for parallelizing tasks, improving multitasking, and optimizing resource
+ utilization in modern computing applications.
+
+19. What is process spawning?
+Ans: Process spawning is the creation of a new independent process by an existing process.
+ The new process, known as the child process, inherits certain attributes from the parent process.
+ Process spawning is a fundamental concept in multitasking and multiprocessing systems, enabling the 
+execution of multiple tasks concurrently.
+
+20. Describe the actions taken by a kernel to context-switch between processes.
+Ans: During a context switch, the kernel saves the current process's context by storing registers,
+ program counter, and other relevant data into its Process Control Block (PCB). Then, it loads the 
+saved context of the next process from its PCB into the CPU registers. This allows the kernel to 
+seamlessly transition between processes, enabling multitasking in a time-sliced manner.
+
+21. The major drawback of multiprogrammed batch systems was the lack of user/programmer
+interaction with their jobs. How can you overcome this?
+Ans: To overcome the lack of user/programmer interaction in multiprogrammed batch systems,
+ interactive computing models were introduced. Time-sharing systems allowed multiple users
+ to interact with the computer simultaneously through terminals. This provided a more responsive
+ and interactive environment. Additionally, the development of interactive programming languages,
+ graphical user interfaces, and real-time systems further addressed the need for user engagement,
+ enhancing the overall user experience in computing environments.
+
+22. What are the five major activities of an operating system with regard to file management?
+Ans: 1. **File creation and deletion:** Creating and removing files.
+2. **Directory manipulation:** Creating, deleting, and navigating directories.
+3. **File manipulation:** Reading, writing, and modifying file contents.
+4. **File protection:** Controlling access and permissions for files.
+5. **File system maintenance:** Managing disk space, optimizing storage, and ensuring data integrity in the file system.
+
+23. Can a process switch from ready to terminated or blocked to terminated state? Justify your
+answer.
+
+Ans: Yes, a process can transition directly from the ready or blocked state to the terminated state.
+ In the ready state, it may be preempted or have its turn in the CPU queue. In the blocked state,
+ it awaits a resource or event. If the process completes its execution or encounters an error,
+ it moves to the terminated state, ending its lifecycle in the operating system.
+
+24. What is the difference between
+(a) consumable and non-consumable resources
+(b) pre-emptive and non-pre-emptive resources
+
+Ans:  a) (a) Consumable resources are depleted upon usage and can be shared, like CPU cycles or printer paper.
+ Non-consumable resources, such as a printer or a scanner, remain intact after usage and are typically not 
+shareable. Consumable resources require replenishment, while non-consumables do not deplete and can be used 
+repeatedly without significant alteration.
+
+	b) Pre-emptive resources can be forcibly taken away from the currently executing process,
+ allowing other processes to use them. In contrast, non-pre-emptive resources cannot be forcefully 
+taken and are held by the process until it voluntarily releases them. Pre-emptive systems often provide
+ better responsiveness and fairness by allowing the OS to interrupt processes, while non-pre-emptive 
+systems rely on cooperative multitasking.
+
+25. Is it true that the role of IPC mechanisms will increase in real-time systems?
+Ans: Yes, the role of Inter-Process Communication (IPC) mechanisms becomes crucial in real-time systems.
+ Real-time systems often involve multiple processes that must synchronize, share data, and communicate
+ efficiently to meet strict timing requirements. Effective IPC mechanisms are essential for coordinating
+ activities and ensuring timely and reliable information exchange in real-time applications.
+
+26. How is reliability increased in microkernel architecture?
+Ans: Reliability is increased in microkernel architecture through modularity. Critical components, 
+such as device drivers and file systems, run in user space as separate processes. If one module fails,
+ it is less likely to impact the entire system, enhancing fault isolation, system stability, and
+ the ability to recover from failures without affecting the entire kernel.
+
+27. How can scheduling be application-specific in case of user threads?
+Ans: Scheduling can be application-specific in user threads by allowing the application to control its thread 
+creation, management, and scheduling policies. The application can implement custom thread scheduling algorithms
+ or prioritize threads based on specific requirements, providing flexibility to adapt the scheduling strategy
+ according to the application's characteristics and needs.
+
+28. What are two differences between user-level threads and kernel-level threads? Under what
+circumstances is one type better than the other?
+Ans: The choice between ULTs and KLTs depends on the application requirements. ULTs are often suitable for
+ lightweight, user-centric applications where low overhead is crucial. KLTs are preferable for applications
+ that require more fine-grained control, efficient multi-core utilization, or interaction with kernel-level
+ resources.
+
+29. Describe the actions taken by a kernel to context-switch between processes.
+
+Ans: During a context switch, the kernel saves the current process's state, including CPU registers and
+ program counter, into its Process Control Block (PCB). It then selects the next process, retrieves its
+ saved state from the PCB, and loads this state into the CPU. Memory management and system structures are
+ updated, and execution resumes, facilitating the illusion of concurrent execution in multitasking systems.
+
+30. What is the purpose of the command interpreter? Why is it usually separate from the kernel?
+Ans: The command interpreter, or shell, interprets user commands and facilitates interaction with the 
+operating system. It provides a command-line interface for users to execute programs, manage files, and
+ perform various tasks. It is separate from the kernel for modularity and flexibility. This separation
+ allows different shells to exist, providing diverse interfaces without affecting the core kernel functionality.
+
+31.  When a process creates a new process using the fork() operation, which of the following
+states is shared between the parent process and the child process?
+a. Stack
+b. Heap
+c. Shared memory segments
+
+Ans: c) shared memory segments
+
+32. Draw the process state diagram explaining each state and the events that can trigger state
+transitions.
+Ans: korte hobe
+
+34. Under what circumstances does a multithreaded solution using multiple kernel threads
+provide better performance than a single-threaded solution on a single-processor system?
+Ans: Multithreading offers performance benefits in single-processor systems when tasks can be parallelized,
+ enhancing concurrency, responsiveness, and resource utilization. It becomes advantageous for applications 
+with parallelizable workloads, I/O-bound operations, and in systems with multiple cores. However, effective 
+multithreading requires careful consideration of synchronization and communication between threads.
+
+35. Using Amdahl’s Law, calculate the speedup gain of an application that has a 60 percent
+parallel component for (a) two processing cores and (b) four processing cores.
+
+Ans: 
+formula => speedup = 1/(F + (1-F)/P)
+​F = 0.6;
+a) P = 2;
+b) P = 4;
+
+36. What are the advantages and disadvantages of using the same systemcall interface for
+manipulating both files and devices? Justify.
+
+Ans: **Advantages:**
+1. Unified Interface: Simplifies development with a consistent API.
+2. Familiarity: Developers need to learn and use only one set of system calls.
+3. Code Reusability: Promotes modular design and efficient code reuse.
+
+**Disadvantages:**
+1. Limited Functionality: May lack specific operations needed for specialized devices.
+2. Performance Impact: Generic interface may not be optimized for certain device-specific operations,
+ potentially impacting performance in scenarios where specialized handling is crucial.
+
+37. It is sometimes difficult to achieve a layered approach if two components
+of the operating system are dependent on each other. Identify a scenario in which it is
+unclear how to layer two system components that require tight coupling of their
+functionalities.
+
+Ans: One scenario where achieving a clear layered approach is challenging is the integration of a file
+ system and a storage device driver. The file system relies on the storage driver to perform read and 
+write operations, while the storage driver needs file system information for proper data storage.
+ Achieving a clean separation of concerns is complex due to the inherent interdependence between
+ these components, often requiring a more integrated design.
