@@ -1,0 +1,148 @@
+1. How is  the process scheduling implemented? 
+Ans: Process scheduling is managed by the operating system scheduler. It selects processes to run on the CPU, considering priorities, time-sharing, and preemptive/non-preemptive policies. Algorithms like round-robin or priority scheduling dictate the order and duration of process execution.
+
+2. How is the process dispatching implemented?
+Ans:Process dispatching is executed by the operating system's dispatcher, which switches context from the current running process to the selected process. It involves saving and restoring the process state, updating the program counter, and allocating resources for execution.
+
+3. What is the difference between a scheduler and a dispatcher?
+Ans: A scheduler, part of the operating system, determines the order in which processes access the CPU based on priority and policies. In contrast, a dispatcher, also part of the OS, performs the actual context switch, saving and restoring process states to facilitate the transition from one process to another during execution.
+
+4. Explain the difference between preemptive and non-preemptive scheduling.
+Ans:Preemptive scheduling allows the operating system to interrupt and forcibly suspend a currently running process to start or resume another, based on priority. Non-preemptive scheduling, on the other hand, lets a process run until it voluntarily releases the CPU, typically completing its execution or entering a waiting state.
+
+5.
+Which of the following scheduling algorithms could result in starvation? Justify.
+a. First-come, first-served
+b. Shortest job first
+c. Round robin
+d. Priority
+Ans: 
+The scheduling algorithm that could result in starvation is:
+a. Priority
+
+In a Priority scheduling algorithm, if a process with a high priority continuously arrives, processes with lower priorities may be starved, i.e., they may not get a chance to execute for a prolonged period, leading to potential delays and lower priority processes waiting indefinitely.
+
+
+6. Differentiate between job, program, and task.
+Ans:A job refers to a unit of work submitted to a computer system. A program is a set of instructions that perform a specific task when executed. A task is a distinct execution unit within a program, representing a specific sequence of instructions to accomplish a particular function.
+
+7 What are the contents of the PCB?
+Ans:The Process Control Block (PCB) contains crucial information about a process in an operating system. It includes process state, program counter, CPU registers, memory management information, process ID, priority, and scheduling information. The PCB facilitates efficient process management, context switching, and resource allocation during multitasking.
+
+8 List the process attributes.
+Ans:Process attributes include Process ID (PID), Process State, Program Counter (PC), CPU registers, Memory management information, Open files, CPU scheduling information, Priority, Pointers to the parent and child processes, Inter-process communication (IPC) information, and Accounting information. These attributes collectively define and manage the execution of a process in an operating system.
+
+9 Explain the situation when scheduling needs to be performed.
+Ans:Scheduling is necessary when multiple processes compete for the CPU's attention in a computer system. Events triggering scheduling include a process transitioning from running to waiting state (e.g., I/O request) or arriving in the ready state (e.g., new process creation), requiring optimal CPU allocation.
+
+
+10 When does starvation occur?
+Ans: Data starvation typically refers to a situation in database systems where a query or transaction is unable to access the required data due to resource constraints, such as locks held by other transactions, leading to prolonged delays or indefinite waits for access to the necessary data.
+
+11 Explain the roles of different queues used in process management.
+Ans:  
+Job Queue:
+ Role: Holds processes waiting to be admitted to the system.
+  Function: New processes enter this queue and await admission for execution.
+
+Ready Queue:
+Role: Contains processes that are ready to execute.
+Function: Processes move to the ready queue after admission, waiting for the CPU.
+
+Device Queue:
+Role: Stores processes waiting for a specific I/O device.
+Function: Processes in this queue are waiting for I/O operations to complete.
+
+Waiting Queue:
+Role: Holds processes waiting for an event other than CPU or I/O.
+Function: Processes here are waiting for signals, semaphore releases, or other events.
+
+Suspended Queue:
+Role: Contains processes that are temporarily removed from main memory.
+Function: Processes in this queue are swapped out to secondary storage to free up memory.
+
+12. Draw RAG system (SELF)
+
+13. What is the effect of deadlock in a system?
+ Ans: Deadlocks in a system can lead to resource starvation, reduced throughput, increased waiting times, system unresponsiveness, complexity in debugging, potential data consistency issues, and even complete system hangs, adversely impacting overall performance and user experience.
+
+14. Explain the shared memory method for process communication.
+Ans: Shared memory is a process communication method where multiple processes access a common memory region. It enables efficient data exchange between processes, allowing them to read and write to shared memory for inter-process communication, enhancing coordination and collaboration.
+
+
+15 What is a synchronized method?
+Ans: A synchronized method in programming refers to a method or block of code that is designed to be accessed by only one thread at a time. It ensures exclusive access, preventing data corruption or race conditions in multithreaded environments.
+
+
+16 What is a critical region?
+Ans: A critical region is a section of code in a program that must be executed atomically, ensuring mutual exclusion to prevent conflicts when accessed by multiple processes or threads. Synchronization mechanisms like locks or semaphores are often used to control access to critical regions.
+
+
+17 What is the difference between deadlock avoidance and detection?
+Ans: Deadlock avoidance aims to prevent deadlock by carefully managing resource allocation to ensure the system remains in a safe state. Deadlock detection identifies existing deadlocks and resolves them. Avoidance is proactive, while detection is reactive, addressing deadlocks after they occur through recovery or termination of processes.
+
+
+18 Can there be a deadlock in the main memory?
+Ans:Yes, deadlocks can occur in main memory. If processes request and hold resources, such as memory blocks, while waiting for additional resources held by other processes, a circular waiting scenario can arise, leading to a deadlock. Proper resource allocation and deadlock prevention strategies are essential to mitigate this risk.
+
+19 Does an unsafe state always lead to a deadlock?
+Ans: No, an unsafe state doesn't always lead to a deadlock. While an unsafe state implies potential deadlocks, system dynamics, resource requests, and releases can still resolve without deadlock. Effective resource allocation and deadlock avoidance mechanisms help prevent or mitigate deadlock risks.
+
+
+20. ‘Deadlocks are not always deterministic’. Comment on this statement.
+Ans: Deadlocks are not always deterministic because their occurrence depends on dynamic factors such as timing, resource requests, and scheduling decisions. The timing of events and the order in which processes request resources contribute to the non-deterministic nature of deadlocks in concurrent systems.
+
+
+21. The major drawback of multiprogrammed batch systems was the lack of user/programmer
+interaction with their jobs. How can you overcome this?
+Ans: To overcome the lack of user/programmer interaction in multiprogrammed batch systems, timesharing systems were introduced. Timesharing allows multiple users to interact with the system simultaneously, providing each user with a share of the CPU time. This enhances user responsiveness and facilitates interactive communication with their jobs, addressing the drawback.
+
+
+22 What are the five major activities of an operating system with regard to file management?
+Ans: 1. **File Creation:** The OS facilitates the generation of new files, allowing users to store data.
+2. **File Deletion:** It manages the removal of files, freeing up storage space and maintaining system efficiency.
+3. **File Reading:** The OS enables the retrieval of data from files, supporting user access to stored information.
+4. **File Writing:** It allows users to modify or add content to files, ensuring dynamic data updates.
+5. **File Protection:** The OS administers access control, safeguarding files from unauthorized users and ensuring data integrity and security.
+
+
+23 Can a process switch from ready to terminated or blocked to terminated state? Justify your
+answer.
+Ans: Yes, a process can transition from the ready or blocked state to the terminated state. In the ready state, it may be preempted or scheduled for termination. In the blocked state, if the process encounters a blocking condition, it can be terminated. This ensures efficient resource management and system responsiveness.
+
+24.
+What is the difference between
+(a) consumable and non-consumable resources
+(b) pre-emptive and non-pre-emptive resources
+
+Ans: 
+(a) **Consumable vs. Non-consumable Resources:** Consumable resources are depleted upon use, like CPU time. Non-consumable resources, such as printers, persist after usage.
+
+(b) **Pre-emptive vs. Non-pre-emptive Resources:** Pre-emptive resources can be forcibly taken from a process (e.g., preemptive scheduling), while non-pre-emptive resources cannot be forcibly withdrawn until the task is completed, promoting stability in execution.
+
+
+
+25 Is it true that the role of IPC mechanisms will increase in real-time systems?
+Ans:  Yes, the importance of Inter-Process Communication (IPC) mechanisms increases in real-time systems. Real-time systems often involve multiple tasks that must synchronize and share data promptly for timely responses. IPC facilitates efficient communication among tasks, ensuring coordination and meeting strict timing requirements critical in real-time applications.
+
+
+26 How is reliability increased in microkernel architecture?
+Ans: Reliability in microkernel architecture is enhanced by minimizing the kernel's complexity. Core services are kept minimal, reducing the likelihood of critical failures. Isolating components into user space improves fault tolerance, as errors in non-essential modules don't affect the essential kernel. This design promotes stability and easier maintenance, contributing to overall system reliability.
+
+ 
+27. How can scheduling be application-specific in case of user threads?
+Ans:
+In user-level thread scheduling, applications can implement custom scheduling policies tailored to their specific needs. Applications can control thread creation, termination, and prioritization, allowing for specialized strategies that optimize performance based on unique requirements, such as real-time constraints or specific task dependencies.
+
+
+28 What are two differences between user-level threads and kernel-level threads? Under what
+circumstances is one type better than the other?
+Ans: User-level threads are managed by user-space libraries, while kernel-level threads are handled by the operating system. User-level threads provide faster context switching but may face issues with blocking calls. Kernel-level threads offer better responsiveness to system events but incur higher overhead. Use user-level threads for lightweight tasks and kernel-level threads for tasks requiring OS-level control and responsiveness to events.
+
+
+
+29 . Describe the actions taken by a kernel to context-switch between processes.
+Ans: During a context switch, the kernel saves the current process's context (registers, program counter, etc.) and updates the process control block. It then loads the saved context of the next process, allowing seamless transition. This involves updating memory management information and ensuring a smooth switch of execution from one process to another.
+
+30. What is the purpose of the command interpreter? Why is it usually separate from the kernel? 
+Ans:  The command interpreter (shell) interprets user commands and communicates them to the operating system kernel for execution. Separating it from the kernel enhances system modularity, flexibility, and security. It allows users to interact with the OS through a higher-level interface, isolating user-level commands from the core kernel functions.
